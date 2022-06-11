@@ -1,0 +1,11 @@
+.Header_module {
+  width: 1440px;
+  height: 134px;
+  background: #806BFF;
+
+  &_icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 15px 0 16px 60px;
+  }
+}

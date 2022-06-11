@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './App.module.scss';
+import classes from "./App.module.scss";
+import Header from "./components/header/Header";
+import Input from "./components/input/Input";
+import Picture from "./components/picture/Picture";
+import ditto from '../src/components/picture/image/ditto.png';
+import bulb from '../src/components/picture/image/bulbusaur.png';
+import bee from '../src/components/picture/image/beedrill.png';
+import weed from '../src/components/picture/image/weedle.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.App_module}>
+        <Header/>
+        <Input/>
+        <Picture
+            ditto = {ditto}
+            bulb = {bulb}
+            beedrill = {bee}
+            weed = {weed}
+        />
     </div>
   );
 }

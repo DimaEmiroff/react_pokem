@@ -1,0 +1,13 @@
+.Picture_module {
+  margin: 60px 57px;
+
+   & img {
+    margin-left: 30px;
+  }
+  & img:first-child {
+    margin-left: 0;
+  }
+  & img:last-child {
+    margin: 30px 0 0 0;
+  }
+}
