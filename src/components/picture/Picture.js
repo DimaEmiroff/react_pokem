@@ -7,14 +7,25 @@ export class Picture extends Component {
     state = {
         props: ''
     }
-
     render() {
         return (
             <div className={classes.Picture_module}>
-                <img src={this.props.ditto}/>
-                <img src={this.props.bulb}/>
-                <img src={this.props.beedrill}/>
-                <img src={this.props.weed}/>
+                <figure className={classes.Picture_module_cont}>
+                    <img src={this.props.ditto}/>
+                    <p>Ditto</p>
+                </figure>
+                <figure className={classes.Picture_module_cont}>
+                    <img src={this.props.bulb}/>
+                    <p>Bulbasaur</p>
+                </figure>
+                <figure className={classes.Picture_module_cont}>
+                    <img src={this.props.weed}/>
+                    <p>Weedle</p>
+                </figure>
+                <figure className={classes.Picture_module_cont}>
+                    <img src={this.props.beedrill}/>
+                    <p>Beedrill</p>
+                </figure>
             </div>
         );
     }
