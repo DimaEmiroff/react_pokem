@@ -17,6 +17,9 @@
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
     font-weight: 700;
+       &_link {
+          text-decoration: none;
+        }
   }
   &_cont:first-child {
     margin-left: 60px;
@@ -24,4 +27,5 @@
   &_cont:last-child {
     margin-left: 60px;
   }
+
 }

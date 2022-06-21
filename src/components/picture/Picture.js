@@ -1,7 +1,6 @@
-// import React from 'react';
 import classes from "./Picture.module.scss";
-
 import React, {Component} from 'react';
+import {NavLink} from "react-router-dom";
 
 export class Picture extends Component {
     state = {
@@ -12,19 +11,19 @@ export class Picture extends Component {
             <div className={classes.Picture_module}>
                 <figure className={classes.Picture_module_cont}>
                     <img src={this.props.ditto}/>
-                    <p>Ditto</p>
+                    <NavLink to={'/ditto'} className={classes.Picture_module_cont_link}><p>Ditto</p></NavLink>
                 </figure>
                 <figure className={classes.Picture_module_cont}>
                     <img src={this.props.bulb}/>
-                    <p>Bulbasaur</p>
+                    <NavLink to={'/bulbasaur'} className={classes.Picture_module_cont_link}><p>Bulbasaur</p></NavLink>
                 </figure>
                 <figure className={classes.Picture_module_cont}>
                     <img src={this.props.weed}/>
-                    <p>Weedle</p>
+                    <NavLink to={'/weedle'} className={classes.Picture_module_cont_link}><p>Weedle</p></NavLink>
                 </figure>
                 <figure className={classes.Picture_module_cont}>
                     <img src={this.props.beedrill}/>
-                    <p>Beedrill</p>
+                    <NavLink to={'/beedrill'} className={classes.Picture_module_cont_link}><p>Beedrill</p></NavLink>
                 </figure>
             </div>
         );
