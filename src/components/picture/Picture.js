@@ -10,21 +10,21 @@ export class Picture extends Component {
         return (
             <div className={classes.Picture_module}>
                 <figure className={classes.Picture_module_cont}>
-                    <img src={this.props.ditto}/>
-                    <NavLink to={'/ditto'} className={classes.Picture_module_cont_link}><p>Ditto</p></NavLink>
+                    <img src={this.props.url} alt={'pokemon'}/>
+                    <NavLink to={'/ditto'} className={classes.Picture_module_cont_link}><p>{this.props.title}</p></NavLink>
                 </figure>
-                <figure className={classes.Picture_module_cont}>
-                    <img src={this.props.bulb}/>
-                    <NavLink to={'/bulbasaur'} className={classes.Picture_module_cont_link}><p>Bulbasaur</p></NavLink>
-                </figure>
-                <figure className={classes.Picture_module_cont}>
-                    <img src={this.props.weed}/>
-                    <NavLink to={'/weedle'} className={classes.Picture_module_cont_link}><p>Weedle</p></NavLink>
-                </figure>
-                <figure className={classes.Picture_module_cont}>
-                    <img src={this.props.beedrill}/>
-                    <NavLink to={'/beedrill'} className={classes.Picture_module_cont_link}><p>Beedrill</p></NavLink>
-                </figure>
+                {/*<figure className={classes.Picture_module_cont}>*/}
+                {/*    <img src={this.props.url}/>*/}
+                {/*    <NavLink to={'/bulbasaur'} className={classes.Picture_module_cont_link}><p>Bulbasaur</p></NavLink>*/}
+                {/*</figure>*/}
+                {/*<figure className={classes.Picture_module_cont}>*/}
+                {/*    <img src={this.props.weed}/>*/}
+                {/*    <NavLink to={'/weedle'} className={classes.Picture_module_cont_link}><p>Weedle</p></NavLink>*/}
+                {/*</figure>*/}
+                {/*<figure className={classes.Picture_module_cont}>*/}
+                {/*    <img src={this.props.beedrill}/>*/}
+                {/*    <NavLink to={'/beedrill'} className={classes.Picture_module_cont_link}><p>Beedrill</p></NavLink>*/}
+                {/*</figure>*/}
             </div>
         );
     }
