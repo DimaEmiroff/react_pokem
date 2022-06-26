@@ -13,6 +13,7 @@ import {fetchPokemonApi, fetchPokemonListApi} from "./components/state/pokemons/
 const App = ()  => {
     const dispatch = useDispatch();
     const pokemonList = useSelector(state => state.pokemonReducer.pokemonList)
+    const pokemonName= useSelector(state => state.pokemonReducer.currentPokemon.title)
     useEffect(() => {
         dispatch(fetchPokemonListApi())
     }, [])
@@ -26,7 +27,7 @@ const App = ()  => {
             <Routes>
                 <Route path={'/'} element={<HomePage/>}/>
                 <Route path={'/home'} element={<HomePage/>}/>
-                <Route path={'/bulbasaur'} element={<CardPok/>}/>
+                <Route path={'/:pokemonName'} element={<CardPok/>}/>
 
             </Routes>
     </div>
