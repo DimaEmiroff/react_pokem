@@ -8,7 +8,7 @@ import {
     REQUEST_POKEMON_SUCCESS,
     ADD_CURRENT_POKEMON, REQUEST_POKEMON_ITEM_LOADING, REQUEST_POKEMON_ITEM_SUCCESS, REQUEST_POKEMON_ITEM_FILED
 } from "./types";
-import {Value} from "sass";
+
 
 //Запрашиваем данные с сервера
 export const fetchPokemonListApi = () => {
