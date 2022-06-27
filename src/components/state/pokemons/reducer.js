@@ -1,7 +1,7 @@
 //Здесь реализовывается логика в соответствие с которой будет происходить обновление полей store.
 
 
-import {ADD_POKEMON_LIST, ADD_POKEMON, ADD_CURRENT_POKEMON} from "./types";
+import {ADD_POKEMON_LIST, ADD_POKEMON, ADD_CURRENT_POKEMON, ADD_POKEMON_ITEM} from "./types";
 
 const initialState = {//Объект начального состояния хранилища
     pokemonList: [],
@@ -18,6 +18,8 @@ export const pokemonReducer = (state = initialState, action) => {
             return {...state, pok: action.payload}
         case ADD_CURRENT_POKEMON://Вывод параметров покемона
             return {...state, currentPokemon: action.payload}
+        case ADD_POKEMON_ITEM://Вывод параметров покемона
+            return {...state, pok: [action.payload]}
         default://возврат текущего состояния по умолчанию
                 return state
     }

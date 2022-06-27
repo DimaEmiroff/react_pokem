@@ -6,7 +6,11 @@ import {
     REQUEST_POKEMON_FILED,
     REQUEST_POKEMON_LOADING,
     REQUEST_POKEMON_SUCCESS,
-    ADD_CURRENT_POKEMON, REQUEST_POKEMON_ITEM_LOADING, REQUEST_POKEMON_ITEM_SUCCESS, REQUEST_POKEMON_ITEM_FILED
+    ADD_CURRENT_POKEMON,
+    REQUEST_POKEMON_ITEM_LOADING,
+    REQUEST_POKEMON_ITEM_SUCCESS,
+    REQUEST_POKEMON_ITEM_FILED,
+    ADD_POKEMON_ITEM
 } from "./types";
 
 
@@ -53,7 +57,7 @@ export const fetchPokemonItemApi = (name) => {
             .then((response) => response.json())
             .then(res => {
                 dispatch({type: REQUEST_POKEMON_ITEM_SUCCESS});
-                dispatch({type: ADD_POKEMON, payload:res.results});
+                dispatch({type: ADD_POKEMON_ITEM, payload: res});
             })
             .catch(() => dispatch({type: REQUEST_POKEMON_ITEM_FILED}))
     }
