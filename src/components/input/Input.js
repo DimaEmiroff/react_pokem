@@ -1,28 +1,25 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import classes from "./Input.module.scss";
 
 
-const Input = () => {
-    const [pok, setPok] = useState([]);
-    const [query, setQuery] = useState('')
+const Input = (props) => {
     const [search, setSearch] = useState('')
-    let a =  '';
 
-    useEffect(() => {
-        const getPok = async () => {
-        a = await fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
-                .then(res => res.json())
-                .then(res => setPok(res.sprites.front_default))
-        };
-       getPok(a)
-    },[search])
+    // useEffect(() => {
+    //     const getPok = async () => {
+    //     await fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
+    //             .then(res => res.json())
+    //             .then(res => setPok(res.sprites.front_default))
+    //     };
+    //    getPok(a)
+    // },[search])
 
     console.log(search)
-    console.log(pok)
+
       return <div className={classes.Input_module}>
-          <input type={'text'} className={classes.Input_module_inp} placeholder={'Find pokemon'} value={query} onChange= {event => setQuery(event.target.value)}/>
-          <input type={'button'} className={classes.Input_module_btn} value={'Search'} onClick= {() => setSearch(query)}/>
-          <img className={classes.Input_module_line}/>
+          <input type={'text'} className={classes.Input_module_inp} placeholder={'Find pokemon'} value={search} onChange= {event => setSearch(event.target.value)}/>
+          <input type={'button'} className={classes.Input_module_btn} value={'Search'} onClick= {() => props.onClick(search)}/>
+          <img className={classes.Input_module_line} alt={''}/>
          </div>
 
 }

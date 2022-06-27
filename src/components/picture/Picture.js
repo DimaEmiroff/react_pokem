@@ -2,7 +2,7 @@ import classes from "./Picture.module.scss";
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
 
-export class Picture extends Component {
+export default class Picture extends Component {
     state = {
         props: ''
     }
@@ -16,7 +16,7 @@ export class Picture extends Component {
             </div>
         );
     }
-}
+};
 
 // const Picture = (props) => {
 //     return (
@@ -28,5 +28,3 @@ export class Picture extends Component {
 //         </div>
 //     );
 // };
-
-export default Picture;

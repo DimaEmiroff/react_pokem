@@ -1,0 +1,18 @@
+.Home_module{
+
+  &_img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &_img:first-child {
+    margin-left: 60px;
+  }
+  &_img:last-child {
+    margin-left: 60px;
+
+  }
+
+
+
+}
