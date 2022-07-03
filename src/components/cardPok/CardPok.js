@@ -29,7 +29,7 @@ const CardPok = () => {
                 <h1>{currentPokemon.title}</h1>
                 <h2>STATS</h2>
                 <div className={classes.cardPok_parametr}>
-                    {currentPokemon.stats.map((item,i) =>{
+                    {currentPokemon.stats?.map((item,i) =>{
                         return (
                             <p key={i}><span>{item.stat.name}: </span> {item.base_stat}</p>
                         )
