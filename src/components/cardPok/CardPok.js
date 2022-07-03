@@ -9,15 +9,12 @@ import {addCurrentPokemonActions} from "../state/pokemons/actions";
 const CardPok = () => {
     const dispatch = useDispatch();
     const currentPokemon = useSelector(state => state.pokemonReducer.currentPokemon);
-    const pokemon = useSelector(state => state.pokemonReducer.pok);
-    const pokemonLocation = useLocation().pathname.split('/')[1];
-    console.log(currentPokemon);
+    const pokemon = useSelector(state => state.pokemonReducer.pok);//вытаскивам данные из стэйта
+    const pokemonLocation = useLocation().pathname.split('/')[1];//Чистим путь до элемента
 
     useEffect(() => {
-
         pokemon.forEach((item) => {
             if (item.name === pokemonLocation){
-                console.log(item);
                 dispatch(addCurrentPokemonActions({title: item.name, imageUrl: item.sprites.front_default, stats: item.stats}))
             }
         })
@@ -32,22 +29,13 @@ const CardPok = () => {
                 <h1>{currentPokemon.title}</h1>
                 <h2>STATS</h2>
                 <div className={classes.cardPok_parametr}>
-                    {/*{pokemon.map((item,i) =>{*/}
-                    {/*    return (*/}
-                    {/*        <p key={i}><span>{item.name}: </span> {item.base_stat}</p>*/}
-                    {/*    )*/}
-                    {/*})}*/}
-
-                    <p> </p>
-                    {/*<p>attack:45</p>*/}
-                    {/*<p>diffence:49</p>*/}
-                    {/*<p>special attack:65</p>*/}
-                    {/*<p>special diffence:65</p>*/}
-                    {/*<p>speed:45</p>*/}
+                    {currentPokemon.stats.map((item,i) =>{
+                        return (
+                            <p key={i}><span>{item.stat.name}: </span> {item.base_stat}</p>
+                        )
+                    })}
                 </div>
-
             </div>
-
         </div>
     );
 };

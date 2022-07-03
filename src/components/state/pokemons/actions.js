@@ -39,14 +39,14 @@ export const fetchPokemonApi = (list) => {
                 .then(value => Promise.all(value.map(elem => elem.json())))
                 .then(value => {
                     dispatch({type: REQUEST_POKEMON_SUCCESS})
-                    dispatch({type:ADD_POKEMON, payload: value})
+                    dispatch({type: ADD_POKEMON, payload: value})
                 })
                 .catch(() => dispatch({type: REQUEST_POKEMON_FILED}))
         }
     }
 //Изменяем значение в строке поиска на url покемона
 export const addCurrentPokemonActions = (currentPokemon) => {
-        return {type:ADD_CURRENT_POKEMON, payload: currentPokemon}
+        return {type: ADD_CURRENT_POKEMON, payload: currentPokemon}
     }
 
 // Поиск данных

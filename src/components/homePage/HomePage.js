@@ -27,10 +27,11 @@ const HomePage = () => {
             {pokemon.map((item, i )=> {
                 return (
                     <Picture
-                        key= {i} title = {item.name}
+                        key= {i}
+                        title = {item.name}
                         url={item.sprites.front_default}
+                        stats={item.stats}
                         addCurrentPokemon={addCurrentPokemon}
-                        stats={item.stat}
                     />
                 )
             })}
